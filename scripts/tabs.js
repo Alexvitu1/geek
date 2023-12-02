@@ -1,3 +1,6 @@
+"use strict";
+//Переключение вкладок
+
 // получаем массив всех вкладок
 const tabs = document.querySelectorAll(".tab__button");
 // получаем массив всех блоков с содержимым вкладок
@@ -5,24 +8,47 @@ const contents = document.querySelectorAll(".catalog__items");
 
 for (let i = 0; i < tabs.length; i++) {
   tabs[i].addEventListener("click", (event) => {
-    let tabsCurrent = event.target.parentElement.children;
-    for (let j = 0; j < tabsCurrent.length; j++) {
-      tabsCurrent[j].classList.remove("tab--active");
-    }
+    tabs.forEach((el) => el.classList.remove("tab--active"));
+    tabs[i].classList.add("tab--active");
 
-    event.target.classList.add("tab--active");
-
-    let contentsCurrent =
-      event.target.parentElement.parentElement.nextElementSibling.children;
-
-    for (let k = 0; k < contentsCurrent.length; k++) {
-      contentsCurrent[k].classList.remove("content--active");
-    }
-
+    contents.forEach((el) => el.classList.remove("content--active"));
     contents[i].classList.add("content--active");
   });
 }
-// alert("Privet Vse!!!");
+
+// for (let i = 0; i < tabs.length; i++) {
+//   tabs[i].addEventListener("click", (event) => {
+//     let tabsCurrent = event.target.parentElement.children;
+//     for (let j = 0; j < tabsCurrent.length; j++) {
+//       tabsCurrent[j].classList.remove("tab--active");
+//     }
+
+//     event.target.classList.add("tab--active");
+
+//     let contentsCurrent =
+//       event.target.parentElement.parentElement.nextElementSibling.children;
+
+//     for (let k = 0; k < contentsCurrent.length; k++) {
+//       contentsCurrent[k].classList.remove("content--active");
+//     }
+
+//     contents[i].classList.add("content--active");
+//   });
+// }
+
+// На переход в раздел сайта "Репродукции" и переключение вкладок из нижнего меню
+const footerTabEls = document.querySelectorAll(".footer__tab");
+
+for (let i = 0; i < footerTabEls.length; i++) {
+  footerTabEls[i].addEventListener("click", (e) => {
+    tabs.forEach((el) => el.classList.remove("tab--active"));
+    tabs[i].classList.add("tab--active");
+
+    contents.forEach((el) => el.classList.remove("content--active"));
+    contents[i].classList.add("content--active");
+  });
+}
+
 // запускаем цикл для каждой вкладки и добавляем на неё событие
 // for (let i = 0; i < tabs.length; i++) {
 //   tabs[i].addEventListener("click", (event) => {

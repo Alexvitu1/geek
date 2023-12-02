@@ -9,18 +9,38 @@
     transition: .3s;
 }
 
-@keyframes slide-right {
+
+  @keyframes scale-out-hor-left {
     0% {
-        -webkit-transform: translateX(-100px);
-        transform: translateX(100px);
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      -webkit-transform-origin: 0 0;
+              transform-origin: 0 0;
+      opacity: 1;
     }
-
     100% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+      -webkit-transform-origin: 0 0;
+              transform-origin: 0 0;
+      opacity: 1;
     }
-}
+  }
+  
 
+  @keyframes slide-in-left {
+    0% {
+      -webkit-transform: translateX(-1000px);
+              transform: translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
 * {
     margin: 0;
     padding: 0;
@@ -57,9 +77,11 @@ body {
         scroll-behavior: smooth;
     }
 
+/* Styles for burger menu on HTML5/CSS3 - start
+
     &__burger {
         position: relative;
-        display: none;
+        visibility: hidden;
 
         &:hover svg path {
             stroke: $brand_nav-hr_color;
@@ -98,17 +120,72 @@ body {
         &:checked~.header__burger-nav {
             left: -23px;
             z-index: 1;
-            animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-            visibility: visible;
+            -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+             visibility: visible;
 
         }
     }
-  
+ */  
+
+/* Styles for burger menu on HTML5/CSS3 - end */
+
+/* Styles for burger menu on JS - start */
+
+    &__burger {
+        position: relative;
+        visibility: hidden;
+
+        &:hover svg path {
+            stroke: $brand_nav-hr_color;
+        }
+
+        &:focus {
+            background-color: $button_bgc_focus;
+        }
+    
+        &:focus svg path {
+                stroke: $brand_nav-hr_color;
+        }
+
+        &:active svg path {
+            stroke: $button_bgc_nav_active;
+        }
+    }
+
+    &__burger-nav {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background-color:$background_base_color;
+        left: 0px;
+        top: 67px;
+        z-index: 1;
+        visibility: hidden;
+        padding: 17px 0 0 15px;
+    }
+
+ 
+    &__burger-nav-animation {
+        left: 0px;
+        z-index: 1;
+        -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+         visibility: visible;
+        }
+ 
+    &__burger-nav-animation-exit {
+        -webkit-animation: scale-out-hor-left 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+        animation: scale-out-hor-left 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+
+    }
+
+    /* Styles for burger menu on JS  - end*/
+
     &__ul {
         display: flex;
         align-items: center;
         gap: 60px;
-        // gap:math.div(60px, 1440px) * 100%;
     }
 
     &__li, &__burger-li {
@@ -160,7 +237,6 @@ body {
             stroke: $button_bgc_nav_active;
         }
     }
-
   
     &__basket {
         position: absolute;
@@ -176,6 +252,8 @@ body {
         font-style: normal;
         font-weight: 700;
         line-height: normal;
+        visibility: hidden;
+
     }
 
     &__container {
@@ -297,6 +375,14 @@ body {
         display: none;
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
+    }
+    &__card__button_basket {
+        @include button;
+        width: 100%;
+        padding: 20px 0;
+        background-color: $button_bgc_nav_active;
+        color: $text_color_3;
+        border: solid 1px transparent;
     }
 }
 
@@ -622,7 +708,7 @@ body {
                 }
     }
 
-    &__link {
+    &__link, &__tab {
         text-decoration: none;
         color: $text_color_2;
         font-size: 18px;
@@ -918,7 +1004,7 @@ body {
         }
 
         &__burger {
-            display: block;
+            visibility: visible;
             margin-left: 5%;
         }
 

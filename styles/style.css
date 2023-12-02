@@ -6,12 +6,26 @@
   font-style: normal;
   font-display: swap;
 }
-@keyframes slide-right {
+@keyframes scale-out-hor-left {
   0% {
-    transform: translateX(100px);
+    transform: scaleX(1);
+    transform-origin: 0 0;
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: 0 0;
+    opacity: 1;
+  }
+}
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
   }
   100% {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 * {
@@ -43,6 +57,59 @@ body {
   background-color: #E1EDE6;
   padding-top: 32px;
   padding-bottom: 32px;
+  /* Styles for burger menu on HTML5/CSS3 - start
+
+      &__burger {
+          position: relative;
+          visibility: hidden;
+
+          &:hover svg path {
+              stroke: $brand_nav-hr_color;
+          }
+
+          &:focus {
+              background-color: $button_bgc_focus;
+          }
+
+          &:focus svg path {
+                  stroke: $brand_nav-hr_color;
+          }
+
+          &:active svg path {
+              stroke: $button_bgc_nav_active;
+          }
+      }
+
+      &__burger-nav {
+          position: absolute;
+          width: 100vw;
+          height: 350px;
+          background-color:$background_base_color;
+          left: 0px;
+          top: 50px;
+          z-index: -1;
+          visibility: hidden;
+          padding: 50px 0 0 15px;
+      }
+
+      &__check {
+          position: absolute;
+          visibility: hidden;
+          left: -9999999px;
+
+          &:checked~.header__burger-nav {
+              left: -23px;
+              z-index: 1;
+              -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+              animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+               visibility: visible;
+
+          }
+      }
+   */
+  /* Styles for burger menu on HTML5/CSS3 - end */
+  /* Styles for burger menu on JS - start */
+  /* Styles for burger menu on JS  - end*/
 }
 .header__nav {
   display: flex;
@@ -51,7 +118,7 @@ body {
 }
 .header__burger {
   position: relative;
-  display: none;
+  visibility: hidden;
 }
 .header__burger:hover svg path {
   stroke: #598D66;
@@ -68,24 +135,22 @@ body {
 .header__burger-nav {
   position: absolute;
   width: 100vw;
-  height: 350px;
+  height: 100vh;
   background-color: #E1EDE6;
   left: 0px;
-  top: 50px;
-  z-index: -1;
-  visibility: hidden;
-  padding: 50px 0 0 15px;
-}
-.header__check {
-  position: absolute;
-  visibility: hidden;
-  left: -9999999px;
-}
-.header__check:checked ~ .header__burger-nav {
-  left: -23px;
+  top: 67px;
   z-index: 1;
-  animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  visibility: hidden;
+  padding: 17px 0 0 15px;
+}
+.header__burger-nav-animation {
+  left: 0px;
+  z-index: 1;
+  animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   visibility: visible;
+}
+.header__burger-nav-animation-exit {
+  animation: scale-out-hor-left 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 .header__ul {
   display: flex;
@@ -144,6 +209,7 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  visibility: hidden;
 }
 .header__container {
   display: flex;
@@ -252,6 +318,18 @@ body {
   display: none;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+}
+.catalog__card__button_basket {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  transition: 0.3s;
+  width: 100%;
+  padding: 20px 0;
+  background-color: #376B44;
+  color: #F4F6F5;
+  border: solid 1px transparent;
 }
 
 .tab {
@@ -517,7 +595,7 @@ body {
 .footer__social-link:active svg path {
   fill: #376B44;
 }
-.footer__link {
+.footer__link, .footer__tab {
   text-decoration: none;
   color: #86928B;
   font-size: 18px;
@@ -525,13 +603,13 @@ body {
   font-weight: 500;
   line-height: 150%; /* 27px */
 }
-.footer__link:hover {
+.footer__link:hover, .footer__tab:hover {
   color: #598D66;
 }
-.footer__link:focus {
+.footer__link:focus, .footer__tab:focus {
   background-color: #D4E8D9;
 }
-.footer__link:active {
+.footer__link:active, .footer__tab:active {
   color: #376B44;
 }
 .footer__rights {
@@ -727,7 +805,7 @@ body {
     background-color: #E1EDE6;
   }
   .header__burger {
-    display: block;
+    visibility: visible;
     margin-left: 5%;
   }
   .header__basket-box {
