@@ -166,10 +166,10 @@ body {
 .header__link, .header__burget-link {
   text-decoration: none;
   color: #2C2D35;
-  font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  font-size: 20px;
 }
 .header__link:hover, .header__burget-link:hover {
   color: #598D66;
@@ -203,16 +203,19 @@ body {
   left: 1px;
   border-radius: 50%;
   background-color: #598D66;
+  color: #2C2D35;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
   color: #FFF;
   text-align: center;
   font-size: 10px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
   visibility: hidden;
 }
 .header__container {
   display: flex;
+  align-items: center;
   gap: 60px;
 }
 
@@ -220,11 +223,13 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
+  color: #2C2D35;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
   color: #598D66;
   font-size: 20px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
 }
 
 .line {
@@ -252,19 +257,22 @@ body {
 }
 .top__title, .top_title-span {
   color: #2C2D35;
-  font-size: 60px;
   font-style: normal;
   font-weight: 500;
+  line-height: normal;
+  font-size: 60px;
   line-height: 110%; /* 66px */
 }
 .top_title-span {
   color: #598D66;
 }
 .top__text {
-  color: #86928B;
-  font-size: 18px;
+  color: #2C2D35;
   font-style: normal;
   font-weight: 500;
+  line-height: normal;
+  color: #86928B;
+  font-size: 18px;
   line-height: 150%; /* 27px */
   margin-top: 20px;
   margin-bottom: 60px;
@@ -309,9 +317,10 @@ body {
 }
 .catalog__title {
   color: #2C2D35;
-  font-size: 40px;
   font-style: normal;
   font-weight: 500;
+  line-height: normal;
+  font-size: 40px;
   line-height: 110%; /* 44px */
 }
 .catalog__items {
@@ -349,6 +358,11 @@ body {
   color: #2C2D35;
   cursor: pointer;
 }
+.tab__button:hover {
+  background-color: #598D66;
+  color: #F4F6F5;
+  border: solid 1px transparent;
+}
 .tab--active {
   background-color: #598D66;
   color: #F4F6F5;
@@ -357,6 +371,9 @@ body {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   max-width: 350px;
   background-color: #E1EDE6;
   padding: 20px 20px 30px;
@@ -367,35 +384,38 @@ body {
 .card__author {
   margin-top: 20px;
   margin-bottom: 10px;
-  color: #86928B;
-  font-size: 18px;
+  color: #2C2D35;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  color: #86928B;
+  font-size: 18px;
 }
 .card__name {
   margin-bottom: 8px;
   color: #2C2D35;
-  font-size: 30px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  color: #2C2D35;
+  font-size: 30px;
 }
 .card__desc {
   margin-bottom: 30px;
   color: #2C2D35;
-  font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  font-size: 18px;
 }
 .card__price {
   margin-bottom: 20px;
-  color: #598D66;
-  font-size: 24px;
+  color: #2C2D35;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  color: #598D66;
+  font-size: 24px;
 }
 .card__button {
   font-size: 20px;
@@ -440,6 +460,10 @@ body {
   padding-bottom: 70px;
   overflow: hidden;
 }
+.new-collection__icon {
+  width: 80px;
+  height: 80px;
+}
 .new-collection__heading-box {
   display: flex;
   align-items: flex-start;
@@ -448,18 +472,22 @@ body {
 }
 .new-collection__title {
   max-width: 421px;
-  color: #F4F6F5;
-  font-size: 40px;
+  color: #2C2D35;
   font-style: normal;
   font-weight: 500;
+  line-height: normal;
+  color: #F4F6F5;
+  font-size: 40px;
   line-height: 100%;
 }
 .new-collection__text {
   max-width: 540px;
-  color: #FFF;
-  font-size: 18px;
+  color: #2C2D35;
   font-style: normal;
   font-weight: 500;
+  line-height: normal;
+  color: #FFF;
+  font-size: 18px;
   line-height: 150%; /* 27px */
 }
 .new-collection__text_mb {
@@ -509,17 +537,19 @@ body {
 }
 .team__title {
   color: #2C2D35;
-  font-size: 40px;
   font-style: normal;
   font-weight: 500;
+  line-height: normal;
+  font-size: 40px;
   line-height: 110%; /* 66px */
   margin-top: 124px;
 }
 .team__text {
   color: #2C2D35;
-  font-size: 18px;
   font-style: normal;
   font-weight: 500;
+  line-height: normal;
+  font-size: 18px;
   line-height: 150%; /* 27px */
   margin-top: 20px;
   margin-bottom: 20px;
@@ -543,17 +573,18 @@ body {
 .footer__phone-link {
   text-decoration: none;
   color: #2C2D35;
-  font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  font-size: 20px;
 }
 .footer__text {
-  color: #86928B;
-  font-size: 18px;
+  color: #2C2D35;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  color: #86928B;
+  font-size: 18px;
   margin-top: 8px;
 }
 .footer__nav {
@@ -563,10 +594,10 @@ body {
 }
 .footer__link-heading {
   color: #2C2D35;
-  font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  font-size: 20px;
 }
 .footer__li {
   list-style-type: none;
@@ -597,10 +628,12 @@ body {
 }
 .footer__link, .footer__tab {
   text-decoration: none;
-  color: #86928B;
-  font-size: 18px;
+  color: #2C2D35;
   font-style: normal;
   font-weight: 500;
+  line-height: normal;
+  color: #86928B;
+  font-size: 18px;
   line-height: 150%; /* 27px */
 }
 .footer__link:hover, .footer__tab:hover {
@@ -613,10 +646,12 @@ body {
   color: #376B44;
 }
 .footer__rights {
-  color: #86928B;
-  font-size: 12px;
+  color: #2C2D35;
   font-style: normal;
   font-weight: 500;
+  line-height: normal;
+  color: #86928B;
+  font-size: 12px;
   line-height: 120%; /* 14.4px */
 }
 .footer__rights_margin {
@@ -625,8 +660,8 @@ body {
 
 @media (max-width: 768px) {
   .center {
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
   }
   .header__link {
     font-size: 18px;
@@ -648,6 +683,13 @@ body {
   .catalog__items {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+  }
+  .new-collection {
+    background-image: url(../images/new-collection_background_tablet.jpg);
+  }
+  .new-collection__icon {
+    width: 60px;
+    height: 60px;
   }
   .new-collection__text {
     max-width: inherit;
@@ -739,8 +781,17 @@ body {
     font-size: 18px;
   }
   .new-collection {
+    background-image: url(../images/new-collection_background_tablet_2.jpg);
     padding-top: 50px;
     padding-bottom: 50px;
+  }
+  .new-collection__title {
+    font-size: 24px;
+    max-width: 261px;
+  }
+  .new-collection__icon {
+    width: 50px;
+    height: 50px;
   }
   .team {
     padding-top: 50px;
@@ -858,6 +909,9 @@ body {
     font-size: 18px;
     margin-right: 20%;
     margin-left: 20%;
+  }
+  .new-collection {
+    background-image: url(../images/new-collection_background_mobile.jpg);
   }
   .new-collection__title {
     font-size: 24px;

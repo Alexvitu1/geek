@@ -1,14 +1,6 @@
 @import 'vars';
 @import 'fonts';
 
-@mixin button {
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    transition: .3s;
-}
-
 
   @keyframes scale-out-hor-left {
     0% {
@@ -198,11 +190,9 @@ body {
 
     &__link, &__burget-link {
         text-decoration: none;
-        color: $text_color_1;
+        @include font_styles;
+        
         font-size: 20px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
         
             &:hover {
                 color: $brand_nav-hr_color;
@@ -246,18 +236,18 @@ body {
         left:1px;
         border-radius: 50%;
         background-color: $button_color_1;
+        @include font_styles;
         color: #FFF;
         text-align: center;
         font-size: 10px;
-        font-style: normal;
         font-weight: 700;
-        line-height: normal;
         visibility: hidden;
 
     }
 
     &__container {
         display: flex;
+        align-items: center;
         gap: 60px;
     }
 
@@ -268,11 +258,10 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
+    @include font_styles;
     color: $brand_nav-hr_color;
     font-size: 20px;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
 }
 
 .line {
@@ -293,22 +282,17 @@ body {
 
     &__image {
         max-width: 100%;
-        // height: auto;
-
     }
 
     &__content {
         margin-top: 145px;
-        // margin-bottom: 69px;
         flex-shrink: 1;
         flex-basis: 50%;
     }
 
     &__title, &_title-span  {
-        color: $text_color_1;
+        @include font_styles;
         font-size: 60px;
-        font-style: normal;
-        font-weight: 500;
         line-height: 110%; /* 66px */
     }
 
@@ -317,10 +301,9 @@ body {
     }
 
     &__text {
+        @include font_styles;
         color: $text_color_2;
         font-size: 18px;
-        font-style: normal;
-        font-weight: 500;
         line-height: 150%; /* 27px */
         margin-top: 20px;
         margin-bottom: 60px;
@@ -364,10 +347,8 @@ body {
     }
 
     &__title {
-        color: $text_color_1;
+        @include font_styles;
         font-size: 40px;
-        font-style: normal;
-        font-weight: 500;
         line-height: 110%; /* 44px */
     }
 
@@ -398,29 +379,14 @@ body {
         background-color: $button_bgc_focus;
         color: $text_color_1;
         cursor: pointer;
-
-            // &:hover {
-            //     background-color: $background_common;
-            //     // color: $text_color_3;
-            //     border: solid 1px $button_color_1;
-            // }
-        
-            // &:hover {
-            //     background-color: $button_color_1;
-            //     color: $text_color_3;
-            //     border: solid 1px transparent;
-            // }
-            // &:focus {
-            //     background-color: $button_bgc_focus;
-            //     color: $button_color_1;
-            //     border: solid 1px $button_color_1;
-            // }
-            // &:active {
-            //     background-color: $button_bgc_nav_active;
-            //     color: $text_color_3;
-            //     border: solid 1px transparent;
-            // }
+     
+            &:hover {
+                background-color: $button_color_1;
+                color: $text_color_3;
+                border: solid 1px transparent;
+            }
     }
+
     &--active {
         background-color: $button_color_1;
         color: $text_color_3;
@@ -430,6 +396,9 @@ body {
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     max-width: 350px;
     background-color: $card_bgc;
     padding: 20px 20px 30px;
@@ -441,38 +410,29 @@ body {
         &__author {
         margin-top: 20px;
         margin-bottom: 10px;
+        @include font_styles;
         color: $text_color_2;
         font-size: 18px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-    }
+     }
 
     &__name {
         margin-bottom: 8px;
+        @include font_styles;
         color: $text_color_1;
         font-size: 30px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
     }
 
     &__desc {
         margin-bottom: 30px;
-        color: $text_color_1;
+        @include font_styles;
         font-size: 18px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
     }
 
     &__price {
         margin-bottom: 20px;
+        @include font_styles;
         color: $button_color_1;        
         font-size: 24px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
     }
 
     &__button {
@@ -509,6 +469,7 @@ body {
 }
 
 .new-collection {
+
     background-image: url(../images/new-collection_background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -517,13 +478,10 @@ body {
     padding-bottom: 70px;
     overflow: hidden;
 
-    // &__box {
-    //     background-image: url(../../img/new-collection_background.jpg);
-    //     background-size: cover;
-    //     background-repeat: no-repeat;
-    //     background-position: center;
-
-    // }
+    &__icon {
+        width: 80px;
+        height: 80px;
+    }
 
     &__heading-box {
         display: flex;
@@ -534,19 +492,17 @@ body {
 
     &__title {
         max-width: 421px;
+        @include font_styles;
         color: $text_color_3;
         font-size: 40px;
-        font-style: normal;
-        font-weight: 500;
         line-height: 100%;
     }
 
     &__text {
         max-width: 540px;
+        @include font_styles;
         color: #FFF;
         font-size: 18px;
-        font-style: normal;
-        font-weight: 500;
         line-height: 150%; /* 27px */
     }
 
@@ -593,9 +549,6 @@ body {
     
     &__image {
         max-width: 100%;
-        // height: auto;
-        // flex-shrink: 1;
-        // flex-basis: 445px;
     }
 
     &__content {
@@ -604,19 +557,15 @@ body {
     }
 
     &__title {
-        color: $text_color_1;
+        @include font_styles;
         font-size: 40px;
-        font-style: normal;
-        font-weight: 500;
         line-height: 110%; /* 66px */
         margin-top: 124px;
     }
 
     &__text {
-        color: $text_color_1;
+        @include font_styles;
         font-size: 18px;
-        font-style: normal;
-        font-weight: 500;
         line-height: 150%; /* 27px */
         margin-top: 20px;
         margin-bottom: 20px;
@@ -643,19 +592,14 @@ body {
 
     &__phone-link {
         text-decoration: none;
-        color: $text_color_1;
+        @include font_styles;
         font-size: 20px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
     }
 
     &__text {
+        @include font_styles;
         color: $text_color_2;
         font-size: 18px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
         margin-top: 8px;
     }
 
@@ -666,11 +610,8 @@ body {
     }
 
     &__link-heading {
-        color: $text_color_1;
+        @include font_styles;
         font-size: 20px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
     }
 
     &__li {
@@ -710,10 +651,9 @@ body {
 
     &__link, &__tab {
         text-decoration: none;
+        @include font_styles;
         color: $text_color_2;
         font-size: 18px;
-        font-style: normal;
-        font-weight: 500;
         line-height: 150%; /* 27px */
 
         &:hover {
@@ -730,10 +670,9 @@ body {
     }
 
     &__rights {
+        @include font_styles;
         color: $text_color_2;
         font-size: 12px;
-        font-style: normal;
-        font-weight: 500;
         line-height: 120%; /* 14.4px */
 
             &_margin {
@@ -746,8 +685,8 @@ body {
 @media (max-width:768px) {
 
     .center {
-        padding-left: 5%;
-        padding-right: 5%;
+        padding-left: 3%;
+        padding-right: 3%;
     }
 
     .header {
@@ -764,10 +703,6 @@ body {
             font-size: 40px;
             line-height: 100%;
         }
-
-        &__image-box {
-            // flex-basis: 330px;
-        }    
   
         &__content {
             margin-top: 35px;
@@ -794,6 +729,13 @@ body {
     }
 
     .new-collection {
+
+        background-image: url(../images/new-collection_background_tablet.jpg);
+        
+        &__icon {
+            width: 60px;
+            height: 60px;
+        }
 
         &__text {
             max-width: inherit;
@@ -921,8 +863,19 @@ body {
     }
 
     .new-collection {            
+        background-image: url(../images/new-collection_background_tablet_2.jpg);
         padding-top: 50px;
         padding-bottom: 50px;
+
+        &__title {
+            font-size: 24px;
+            max-width: 261px;
+        }
+
+        &__icon {
+            width: 50px;
+            height: 50px;
+        }
             }
 
     .team {
@@ -1085,6 +1038,8 @@ body {
     }
 
     .new-collection {
+
+        background-image: url(../images/new-collection_background_mobile.jpg);
 
         &__title {
             font-size: 24px;

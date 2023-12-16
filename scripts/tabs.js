@@ -21,7 +21,7 @@ function removeClassFromList(elName, ListName) {
 }
 
 function addClassToListEl(elName, className) {
-  elName.classListEl.add(className);
+  elName.classList.add(className);
 }
 
 tabsSwitch(tabEls);

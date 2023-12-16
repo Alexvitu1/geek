@@ -13,3 +13,18 @@ $text_color_3: #F4F6F5;
 $card_bgc: #E1EDE6;
 $button_bgc_nav_active: #376B44;
 $line_color: #C3D1C6;
+
+@mixin button {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    transition: .3s;
+}
+
+@mixin font_styles {
+    color: $text_color_1;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
