@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Raleway";
-  src: url("../../fonts/subset-Raleway-Medium.eot");
-  src: url("../../fonts/subset-Raleway-Medium.eot?#iefix") format("embedded-opentype"), url("../../fonts/subset-Raleway-Medium.woff2") format("woff2"), url("../../fonts/subset-Raleway-Medium.woff") format("woff"), url("../../fonts/subset-Raleway-Medium.ttf") format("truetype"), url("../../fonts/subset-Raleway-Medium.svg#Raleway-Medium") format("svg");
+  src: url("../fonts/subset-Raleway-Medium.eot");
+  src: url("../fonts/subset-Raleway-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/subset-Raleway-Medium.woff2") format("woff2"), url("../fonts/subset-Raleway-Medium.woff") format("woff"), url("../fonts/subset-Raleway-Medium.ttf") format("truetype"), url("../fonts/subset-Raleway-Medium.svg#Raleway-Medium") format("svg");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -663,7 +663,7 @@ body {
     padding-left: 3%;
     padding-right: 3%;
   }
-  .header__link {
+  .header__link, .header__burget-link {
     font-size: 18px;
   }
   .top__title, .top_title-span {

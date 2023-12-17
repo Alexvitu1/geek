@@ -9,6 +9,7 @@ const cardButtonEl = document.querySelector(".card__button");
 let counter = 0;
 
 catalogBoxEl.addEventListener("click", (e) => {
+  console.log(e.target.innerText);
   if (
     e.target.className === "card__button" &&
     e.target.innerText === "В корзину"
