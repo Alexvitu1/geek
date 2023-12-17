@@ -188,7 +188,7 @@ body {
         margin-bottom: 50px;
     }
 
-    &__link, &__burget-link {
+    &__link, &__burger-link {
         text-decoration: none;
         @include font_styles;
         
@@ -691,7 +691,7 @@ body {
 
     .header {
 
-        &__link, &__burget-link {
+        &__link, &__burger-link {
             font-size: 18px;
 
         }

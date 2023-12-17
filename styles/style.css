@@ -163,7 +163,7 @@ body {
 .header__burger-li:not(:last-child) {
   margin-bottom: 50px;
 }
-.header__link, .header__burget-link {
+.header__link, .header__burger-link {
   text-decoration: none;
   color: #2C2D35;
   font-style: normal;
@@ -171,13 +171,13 @@ body {
   line-height: normal;
   font-size: 20px;
 }
-.header__link:hover, .header__burget-link:hover {
+.header__link:hover, .header__burger-link:hover {
   color: #598D66;
 }
-.header__link:focus, .header__burget-link:focus {
+.header__link:focus, .header__burger-link:focus {
   background-color: #D4E8D9;
 }
-.header__link:active, .header__burget-link:active {
+.header__link:active, .header__burger-link:active {
   color: #376B44;
 }
 .header__basket-box {
@@ -663,7 +663,7 @@ body {
     padding-left: 3%;
     padding-right: 3%;
   }
-  .header__link, .header__burget-link {
+  .header__link, .header__burger-link {
     font-size: 18px;
   }
   .top__title, .top_title-span {
