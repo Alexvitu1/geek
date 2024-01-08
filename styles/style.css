@@ -134,7 +134,7 @@ body {
 }
 .header__burger-nav {
   position: absolute;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-color: #E1EDE6;
   left: 0px;
