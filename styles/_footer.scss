@@ -1,0 +1,180 @@
+.footer {
+    display: flex;
+    background-color: $background_base_color;
+    padding-top: 23px;
+    padding-bottom: 23px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+ 
+    &__logo {
+        margin-bottom: 35px;
+    }
+
+    &__phone-link {
+        text-decoration: none;
+        @include font_styles;
+        font-size: 20px;
+    }
+
+    &__text {
+        @include font_styles;
+        color: $text_color_2;
+        font-size: 18px;
+        margin-top: 8px;
+    }
+
+    &__nav {
+        display: flex;
+        gap: 60px;
+        margin-right: 69px;
+    }
+
+    &__link-heading {
+        @include font_styles;
+        font-size: 20px;
+    }
+
+    &__li {
+        list-style-type: none;
+
+        &:not(:last-child) {
+            margin-bottom: 6px;
+        }
+    }
+
+    &__social-link-box {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 10px;
+        }
+
+    &__social-link {
+        display: flex;
+        align-items: center;
+        
+            &:focus {
+                background-color: $button_bgc_focus;
+            }
+            
+            &:hover svg path {
+                fill: $button_color_1;
+            }
+
+            &:focus svg path {
+                fill: $button_color_1;
+                }
+
+            &:active svg path {
+                fill: $button_bgc_nav_active;
+                }
+    }
+
+    &__link, &__tab {
+        text-decoration: none;
+        @include font_styles;
+        color: $text_color_2;
+        font-size: 18px;
+        line-height: 150%; /* 27px */
+
+        &:hover {
+            color:$brand_nav-hr_color;
+        }
+
+        &:focus {
+            background-color: $button_bgc_focus;
+        }
+
+        &:active {
+            color:$button_bgc_nav_active;
+        }
+    }
+
+    &__rights {
+        @include font_styles;
+        color: $text_color_2;
+        font-size: 12px;
+        line-height: 120%; /* 14.4px */
+
+            &_margin {
+                margin-bottom: 6px;
+            }
+    }
+
+}
+
+
+@media (max-width:768px) {
+    .footer {
+
+        display: flex;
+        justify-content: normal;
+
+        &__contacts {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        &__nav {
+            margin-right: 39px;
+        }
+    }
+
+}
+
+@media (max-width:700px) {
+    .footer {
+        display: block;
+
+        &__contacts {
+            margin-bottom: 30px;
+        }
+
+        &__text {
+            font-size: 16px;
+        }
+
+        &__link {
+            font-size: 16px;
+        }
+
+        &__nav {
+            gap: 0; 
+            margin-right: 0px;
+            justify-content: space-between;
+        }
+
+        &__right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        &__rights {
+            display: inline;
+        }
+    }
+}
+
+@media (max-width: 460px) {
+    .footer {
+
+        &__contacts {
+            display: block;
+        }
+    
+        &__link-heading, &__phone-link  {
+            font-size: 16px;
+        }
+    
+        &__nav {
+            display: block;
+        }
+    
+        &__ul {
+            margin-bottom: 20px;
+        }
+    
+    }
+    
+}

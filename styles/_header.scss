@@ -1,0 +1,317 @@
+@keyframes scale-out-hor-left {
+    0% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      -webkit-transform-origin: 0 0;
+              transform-origin: 0 0;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+      -webkit-transform-origin: 0 0;
+              transform-origin: 0 0;
+      opacity: 1;
+    }
+  }
+  
+
+  @keyframes slide-in-left {
+    0% {
+      -webkit-transform: translateX(-1000px);
+              transform: translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .center {
+    padding-left: calc(50% - 550px);
+    padding-right: calc(50% - 550px);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $background_base_color;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    &__nav {
+        display: flex;
+        gap: 60px;
+        scroll-behavior: smooth;
+    }
+
+/* Styles for burger menu on HTML5/CSS3 - start
+
+    &__burger {
+        position: relative;
+        visibility: hidden;
+
+        &:hover svg path {
+            stroke: $brand_nav-hr_color;
+        }
+
+        &:focus {
+            background-color: $button_bgc_focus;
+        }
+    
+        &:focus svg path {
+                stroke: $brand_nav-hr_color;
+        }
+
+        &:active svg path {
+            stroke: $button_bgc_nav_active;
+        }
+    }
+
+    &__burger-nav {
+        position: absolute;
+        width: 100vw;
+        height: 350px;
+        background-color:$background_base_color;
+        left: 0px;
+        top: 50px;
+        z-index: -1;
+        visibility: hidden;
+        padding: 50px 0 0 15px;
+    }
+    
+    &__check {
+        position: absolute;
+        visibility: hidden;
+        left: -9999999px;
+    
+        &:checked~.header__burger-nav {
+            left: -23px;
+            z-index: 1;
+            -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+             visibility: visible;
+
+        }
+    }
+ */  
+
+/* Styles for burger menu on HTML5/CSS3 - end */
+
+/* Styles for burger menu on JS - start */
+
+    &__burger {
+        position: relative;
+        visibility: hidden;
+
+        &:hover svg path {
+            stroke: $brand_nav-hr_color;
+        }
+
+        &:focus {
+            background-color: $button_bgc_focus;
+        }
+    
+        &:focus svg path {
+                stroke: $brand_nav-hr_color;
+        }
+
+        &:active svg path {
+            stroke: $button_bgc_nav_active;
+        }
+    }
+
+    &__burger-nav {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color:$background_base_color;
+        left: 0px;
+        top: 67px;
+        z-index: 1;
+        visibility: hidden;
+        padding: 17px 0 0 15px;
+    }
+
+ 
+    &__burger-nav-animation {
+        left: 0px;
+        z-index: 1;
+        -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+         visibility: visible;
+        }
+ 
+    &__burger-nav-animation-exit {
+        -webkit-animation: scale-out-hor-left 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+        animation: scale-out-hor-left 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+
+    }
+
+    /* Styles for burger menu on JS  - end*/
+
+    &__ul {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+    }
+
+    &__li, &__burger-li {
+        list-style-type: none;
+    }
+
+    &__burger-li:not(:last-child) {
+        margin-bottom: 50px;
+    }
+
+    &__link, &__burger-link {
+        text-decoration: none;
+        @include font_styles;
+        
+        font-size: 20px;
+        
+            &:hover {
+                color: $brand_nav-hr_color;
+            }
+
+            &:focus {
+                background-color: $button_bgc_focus;
+            }
+
+            &:active {
+                color: $button_bgc_nav_active;            
+            }
+    }
+
+    &__basket-box {
+
+        position: relative;
+
+        &:hover svg path {
+            stroke: $brand_nav-hr_color;
+        }
+
+        &:focus {
+            background-color: $button_bgc_focus;
+        }
+    
+        &:focus svg path {
+                stroke: $brand_nav-hr_color;
+        }
+
+        &:active svg path {
+            stroke: $button_bgc_nav_active;
+        }
+    }
+  
+    &__basket {
+        position: absolute;
+        height: 13px;
+        width: 13px;
+        top:1px;
+        left:1px;
+        border-radius: 50%;
+        background-color: $button_color_1;
+        @include font_styles;
+        color: #FFF;
+        text-align: center;
+        font-size: 10px;
+        font-weight: 700;
+        visibility: hidden;
+
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+    }
+
+
+}
+
+.logo__text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    @include font_styles;
+    color: $brand_nav-hr_color;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+@media (max-width:768px) {
+
+    .center {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .header {
+
+        &__link, &__burger-link {
+            font-size: 18px;
+
+        }
+    }
+}
+
+@media (max-width:700px) {
+
+    .header {
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+
+        &__nav {
+            width: 100%;
+            gap: 0;
+            justify-content: space-between;          
+        }
+
+        &__container {
+            justify-content: space-between;
+            width: 100%;
+            gap: 0;
+            
+        }
+    }
+}
+
+
+@media (max-width: 460px) {
+
+    .header {
+            padding-left: 0;
+            padding-right: 0;
+            background-color: $background_common;
+
+        &__nav {
+            display: none;
+        }
+
+        &__container {
+            padding-top: 16px;
+            padding-bottom: 16px;
+            background-color: $background_base_color;
+        }
+
+        &__burger {
+            visibility: visible;
+            margin-left: 3%;
+        }
+
+        &__basket-box {
+            margin-right: 3%;            
+        }
+    }
+
+}
