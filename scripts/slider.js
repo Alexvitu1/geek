@@ -56,9 +56,9 @@ function changeDot(number) {
 }
 
 function changeElement(number, parentEl, elementAtrribute, elementArray) {
-  const currentTitle = parentEl.querySelector(".visible");
-  currentTitle.classList.remove("visible");
-  currentTitle.classList.add("hidden");
+  const currentElement = parentEl.querySelector(".visible");
+  currentElement.classList.remove("visible");
+  currentElement.classList.add("hidden");
   elementArray.forEach((item) => {
     if (parseInt(item.getAttribute(elementAtrribute)) === number) {
       item.classList.remove("hidden");

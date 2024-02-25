@@ -214,6 +214,7 @@ body {
         background-color: $card_bgc;
         color: $button_color_1;
         border: solid 1px $button_color_1;
+        
 
         &:hover {
             background-color: $button_color_1;
@@ -328,11 +329,30 @@ body {
         flex-basis: 635px;
     }
 
+    &__link {
+        text-decoration: none;
+    }
+
     &__title {
         @include font_styles;
         font-size: 40px;
         line-height: 110%; /* 66px */
         margin-top: 124px;
+        cursor: pointer;
+
+
+            &:hover {
+                color: $brand_nav-hr_color;
+            }
+
+            &:focus {
+                background-color: $button_bgc_focus;
+            }
+
+            &:active {
+                color: $button_bgc_nav_active;            
+            }
+
     }
 
     &__text {
@@ -407,6 +427,7 @@ body {
 
         &__title {
             margin-top: 40px;
+            color: green;
         }
 
         &__text {

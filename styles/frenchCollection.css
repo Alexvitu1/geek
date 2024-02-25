@@ -232,7 +232,7 @@
     align-items: center;
     gap: 16px;
     padding-top: 16px;
-    padding-bottom: 16px;
+    padding-bottom: 0px;
   }
   .header__nav {
     width: 100%;
@@ -429,26 +429,16 @@
 }
 
 html, body {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
   font-family: "Raleway", sans-serif;
   scroll-behavior: smooth;
 }
 
 main {
-  flex-grow: 1;
   background-image: url(../images/frenchCollection/background_1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
 }
 
 .center {
@@ -474,6 +464,7 @@ main {
 }
 
 .new-french {
+  height: 100vh;
   text-align: center;
 }
 .new-french__title {
@@ -482,7 +473,6 @@ main {
   font-weight: 500;
   line-height: normal;
   font-size: 50px;
-  padding-bottom: 5px;
 }
 
 .slider {
@@ -512,11 +502,12 @@ main {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 20px 0 20px;
+  margin: 20px 0 30px;
 }
 .slider__img {
   max-width: 80%;
-  border: 1px solid grey;
+  aspect-ratio: 16/9;
+  border: 1px solid transparent;
   border-radius: 20px;
 }
 .slider__painter, .slider__painting, .slider__title {
@@ -553,6 +544,9 @@ main {
 }
 
 @media (max-width: 768px) {
+  .new-french__title {
+    font-size: 40px;
+  }
   .slider {
     align-items: center;
     position: relative;
@@ -563,15 +557,62 @@ main {
   .slider__left-arrow-box {
     position: absolute;
     left: 3%;
-    border: 7px solid transparent;
+    border: 3px solid transparent;
     border-radius: 50%;
     background-color: #E1EDE6;
+    display: flex;
   }
   .slider__right-arrow-box {
     position: absolute;
     right: 3%;
-    border: 7px solid transparent;
+    border: 3px solid transparent;
     border-radius: 50%;
     background-color: #E1EDE6;
+    display: flex;
+  }
+  .slider__right-arrow, .slider__left-arrow {
+    height: 40px;
+  }
+}
+@media (max-width: 460px) {
+  .new-french {
+    height: auto;
+    padding-bottom: 30px;
+  }
+  .new-french__title {
+    font-size: 30px;
+  }
+  .slider__painter {
+    color: #2C2D35;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 20px;
+  }
+  .slider__painting {
+    color: #2C2D35;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 14px;
+    color: #86928B;
+  }
+  .slider__img-box {
+    margin: 10px 0 10px;
+  }
+  .slider__right-arrow-box, .slider__left-arrow-box {
+    border: 5px solid transparent;
+    background-color: #E1EDE6;
+  }
+  .slider__right-arrow, .slider__left-arrow {
+    height: 30px;
+  }
+  .slider__nav-dots {
+    gap: 15px;
+  }
+  .slider__dot {
+    width: 12px;
+    height: 12px;
+    border: 2px solid grey;
   }
 }/*# sourceMappingURL=frenchCollection.css.map */

@@ -255,7 +255,6 @@
 
         &__link, &__burger-link {
             font-size: 18px;
-
         }
     }
 }
@@ -269,7 +268,7 @@
         align-items: center;
         gap: 16px;
         padding-top: 16px;
-        padding-bottom: 16px;
+        padding-bottom: 0px;
 
         &__nav {
             width: 100%;
