@@ -113,6 +113,9 @@ text-align: center;
         border: 5px solid grey;
     }
 
+    // &__box {
+    //     min-height: 500px;
+    // }
 }
 
 
@@ -226,5 +229,12 @@ text-align: center;
             height: 12px;
             border: 2px solid grey;
         }
+    }
+}
+
+@media (max-height:500px) {
+    .new-french {
+        height: 750px;
+        text-align: center;
     }
 }

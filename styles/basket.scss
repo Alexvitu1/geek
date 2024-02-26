@@ -1,0 +1,64 @@
+@import 'vars';
+@import 'fonts';
+@import 'header';
+@import 'footer';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+html, body {
+    font-family: 'Raleway', sans-serif;
+            scroll-behavior: smooth;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    @include font_styles;
+    color: $brand_nav-hr_color;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.line {
+    display: none;
+}
+
+.basket {
+
+    &__message {
+        font-size: 70;
+        font-weight: 900;
+        text-align: center;
+    }
+}
+
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+
+@media (max-width:768px) {
+
+}
+
+@media (max-width:700px) {
+
+
+
+}
+
+@media (max-width: 460px) {
+
+
+}
