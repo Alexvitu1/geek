@@ -4,13 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Diploma - Products page</title>
+    <title>My Diploma - Basket page</title>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/products.css">
-    <!-- <script src="scripts/slider.js" defer></script> -->
-    <!-- <script src="scripts/tabs.js" defer></script> -->
-    <script src="scripts/basketCounterProducts.js" defer></script>
-    <script src="scripts/products.js" defer></script>
+    <script src="scripts/basket.js" defer></script>
+    <script src="scripts/burger.js" defer></script>
 </head>
 
 <body>
@@ -126,7 +124,196 @@
     </header>
     <main>
         <section class="basket center">
-            <h1 class="basket__message">Under development</h1>
+            <h1 class="basket__message hidden">В корзине пока пусто. Выберите товары на главной странице или на странице
+                Продукция</h1>
+        </section>
+        <section class="catalog center">
+            <div class="catalog__box">
+                <div class="card hidden" data-price="14500" data-country="france" data-number="1">
+                    <div class="card__img-box">
+                        <img src="images/card_France_1.jpg" alt="Picture France" class="card__img">
+                    </div>
+                    <p class="card__author">Марсель Руссо</p>
+                    <h3 class="card__name">Охота Амура</h3>
+                    <p class="card__desc">Холст, масло (50&times;80)</p>
+                    <p class="card__price">14&nbsp;500 руб</p>
+                    <button class="card__button">В корзину</button>
+                </div>
+                <div class="card hidden" data-price="16500" data-country="france" data-number="2">
+                    <div class="card__img-box">
+                        <img src="images/card_France_2.jpg" alt="Picture France" class="card__img">
+                    </div>
+                    <p class="card__author">Анри Селин</p>
+                    <h3 class="card__name">Дама с собачкой</h3>
+                    <p class="card__desc">Акрил, бумага (50&times;80) </p>
+                    <p class="card__price">16&nbsp;500 руб</p>
+                    <button class="card__button">В корзину</button>
+                </div>
+                <div class="card hidden" data-price="20000" data-country="france" data-number="3">
+                    <div class="card__img-box">
+                        <img src="images/card_France_3.jpg" alt="Picture France" class="card__img">
+                    </div>
+                    <p class="card__author">Франсуа Дюпон</p>
+                    <h3 class="card__name">Процедура</h3>
+                    <p class="card__desc">Цветная литография (40&times;60) </p>
+                    <p class="card__price">20&nbsp;000 руб</p>
+                    <button class="card__button">В корзину</button>
+                </div>
+                <div class="card hidden" data-price="12000" data-country="france" data-number="4">
+                    <div class="card__img-box">
+                        <img src="images/card_France_4.jpg" alt="Picture France" class="card__img">
+                    </div>
+                    <p class="card__author">Луи Детуш</p>
+                    <h3 class="card__name">Роза</h3>
+                    <p class="card__desc">Бумага, акрил (50&times;80) </p>
+                    <p class="card__price">12&nbsp;000 руб</p>
+                    <button class="card__button"> В корзину</button>
+                </div>
+                <div class="card hidden" data-price="22500" data-country="france" data-number="5">
+                    <div class="card__img-box">
+                        <img src="images/card_France_5.jpg" alt="Picture France" class="card__img">
+                    </div>
+                    <p class="card__author">Франсуа Дюпон</p>
+                    <h3 class="card__name">Птичья трапеза</h3>
+                    <p class="card__desc">Цветная литография (40&times;60) </p>
+                    <p class="card__price">22&nbsp;500 руб</p>
+                    <button class="card__button"> В корзину</button>
+                </div>
+                <div class="card hidden" data-price="20000" data-country="france" data-number="6">
+                    <div class="card__img-box">
+                        <img src="images/card_France_6.jpg" alt="Picture France" class="card__img">
+                    </div>
+                    <p class="card__author">Пьер Моранж</p>
+                    <h3 class="card__name">Пейзаж с рыбой</h3>
+                    <p class="card__desc">Цветная литография (40&times;60) </p>
+                    <p class="card__price">20&nbsp;000 руб</p>
+                    <button class="card__button"> В корзину</button>
+                    <!-- </div> -->
+                </div>
+                <div class="card hidden" data-price="16000" data-country="germany" data-number="7">
+                    <div class="card__img-box">
+                        <img src="images/card_Germany_1.jpg" alt="Picture Germany" class="card__img">
+                    </div>
+                    <p class="card__author">Курт Вернер</p>
+                    <h3 class="card__name">Над городом</h3>
+                    <p class="card__desc">Цветная литография (40&times;60)</p>
+                    <p class="card__price">16&nbsp;000 руб</p>
+                    <button class="card__button"> В корзину</button>
+                </div>
+                <div class="card hidden" data-price="14500" data-country="germany" data-number="8">
+                    <div class="card__img-box">
+                        <img src="images/card_Germany_2.jpg" alt="Picture Germany" class="card__img">
+                    </div>
+                    <p class="card__author">Макс Рихтер</p>
+                    <h3 class="card__name">Птенцы</h3>
+                    <p class="card__desc">Холст, масло (50&times;80) </p>
+                    <p class="card__price">14&nbsp;500 руб</p>
+                    <button class="card__button"> В корзину</button>
+                </div>
+                <div class="card hidden" data-price="20000" data-country="germany" data-number="9">
+                    <div class="card__img-box">
+                        <img src="images/card_Germany_3.jpg" alt="Picture Germany" class="card__img">
+                    </div>
+                    <p class="card__author">Мартин Майер</p>
+                    <h3 class="card__name">Среди листьев</h3>
+                    <p class="card__desc">Цветная литография (40&times;60) </p>
+                    <p class="card__price">20&nbsp;000 руб</p>
+                    <button class="card__button"> В корзину</button>
+                </div>
+                <div class="card hidden" data-price="13000" data-country="germany" data-number="10">
+                    <div class="card__img-box">
+                        <img src="images/card_Germany_4.jpg" alt="Picture Germany" class="card__img">
+                    </div>
+                    <p class="card__author">Герман Беккер</p>
+                    <h3 class="card__name">Яркая птица</h3>
+                    <p class="card__desc">Цветная литография (40&times;60)</p>
+                    <p class="card__price">13&nbsp;000 руб</p>
+                    <button class="card__button"> В корзину</button>
+                </div>
+                <div class="card hidden" data-price="20000" data-country="germany" data-number="11">
+                    <div class="card__img-box">
+                        <img src="images/card_Germany_5.jpg" alt="Picture Germany" class="card__img">
+                    </div>
+                    <p class="card__author">Вульф Бауэр</p>
+                    <h3 class="card__name">Дятлы</h3>
+                    <p class="card__desc">Бумага, акрил (50&times;80) </p>
+                    <p class="card__price">20&nbsp;000 руб</p>
+                    <button class="card__button"> В корзину</button>
+                </div>
+                <div class="card hidden" data-price="23000" data-country="germany" data-number="12">
+                    <div class="card__img-box">
+                        <img src="images/card_Germany_6.jpg" alt="Picture Germany" class="card__img">
+                    </div>
+                    <p class="card__author">Вальтер Хартманн</p>
+                    <h3 class="card__name">Большие воды</h3>
+                    <p class="card__desc">Бумага, акрил (50&times;80) </p>
+                    <p class="card__price">23&nbsp;000 руб</p>
+                    <button class="card__button"> В корзину</button>
+                    <!-- </div> -->
+                </div>
+                <div class="card hidden" data-price="19500" data-country="england" data-number="13">
+                    <div class="card__img-box">
+                        <img src="images/card_England_1.jpg" alt="Picture England" class="card__img">
+                    </div>
+                    <p class="card__author">Пол Смит</p>
+                    <h3 class="card__name">Дикий зверь</h3>
+                    <p class="card__desc">Акварель, бумага (50&times;80) </p>
+                    <p class="card__price">19&nbsp;500 руб</p>
+                    <button class="card__button"> В корзину</button>
+                </div>
+                <div class="card hidden" data-price="17500" data-country="england" data-number="14">
+                    <div class="card__img-box">
+                        <img src="images/card_England_2.jpg" alt="Picture England" class="card__img">
+                    </div>
+                    <p class="card__author">Джон Уайт</p>
+                    <h3 class="card__name">Скалистый берег</h3>
+                    <p class="card__desc">Цветная литография (40&times;60)</p>
+                    <p class="card__price">17&nbsp;500 руб</p>
+                    <button class="card__button"> В корзину</button>
+                </div>
+                <div class="card hidden" data-price="20500" data-country="england" data-number="15">
+                    <div class="card__img-box">
+                        <img src="images/card_England_3.jpg" alt="Picture England" class="card__img">
+                    </div>
+                    <p class="card__author">Джим Уотсон</p>
+                    <h3 class="card__name">Река и горы</h3>
+                    <p class="card__desc">Акварель, бумага (50&times;80) </p>
+                    <p class="card__price">20&nbsp;500 руб</p>
+                    <button class="card__button"> В корзину</button>
+                </div>
+                <div class="card hidden" data-price="15500" data-country="england" data-number="16">
+                    <div class="card__img-box">
+                        <img src="images/card_England_4.jpg" alt="Picture England" class="card__img">
+                    </div>
+                    <p class="card__author">Юджин Зиллион</p>
+                    <h3 class="card__name">Белый попугай</h3>
+                    <p class="card__desc">Цветная литография (40&times;60)</p>
+                    <p class="card__price">15&nbsp;500 руб</p>
+                    <button class="card__button"> В корзину</button>
+                </div>
+                <div class="card hidden" data-price="12500" data-country="england" data-number="17">
+                    <div class="card__img-box">
+                        <img src="images/card_England_5.jpg" alt="Picture England" class="card__img">
+                    </div>
+                    <p class="card__author">Эрик Гиллман</p>
+                    <h3 class="card__name">Ночная рыба</h3>
+                    <p class="card__desc">Бумага, акрил (50&times;80) </p>
+                    <p class="card__price">12&nbsp;500 руб</p>
+                    <button class="card__button"> В корзину</button>
+                </div>
+                <div class="card hidden" data-price="21000" data-country="england" data-number="18">
+                    <div class="card__img-box">
+                        <img src="images/card_England_6.jpg" alt="Picture England" class="card__img">
+                    </div>
+                    <p class="card__author">Альфред Барр</p>
+                    <h3 class="card__name">Рыжий кот</h3>
+                    <p class="card__desc">Цветная литография (40&times;60) </p>
+                    <p class="card__price">21&nbsp;000 руб</p>
+                    <button class="card__button"> В корзину</button>
+                </div>
+            </div>
+
+
         </section>
     </main>
     <footer class="footer center">
@@ -135,8 +322,6 @@
                 <a href="index.html" class="footer__link"><img src="images/logo.svg" alt="Logo icon"
                         class="logo__image"></a>
                 <a href="index.html" class="logo__text">Ink. House</a>
-                <!-- <img src="images/logo.svg" alt="Logo icon" class="logo__image"> -->
-                <!-- <p class="logo__text">Ink. House</p> -->
             </div>
             <div class="footer__phone">
                 <a href="tel:+79995435454" class="footer__phone-link">+7 (999) 543-54-54</a>

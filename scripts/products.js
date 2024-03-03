@@ -12,7 +12,7 @@ sortSelectEl.onchange = function () {
 };
 const sortElementsByAscPrice = (atributeName) => {
   const catalogEl = document.querySelector(".catalog__box");
-  console.log(catalogEl);
+  // console.log(catalogEl);
   const elementsEl = Array.from(
     catalogEl.querySelectorAll(`[${atributeName}]`)
   );
@@ -28,7 +28,7 @@ const sortElementsByAscPrice = (atributeName) => {
 };
 const sortElementsByDescPrice = (atributeName) => {
   const catalogEl = document.querySelector(".catalog__box");
-  console.log(catalogEl);
+  // console.log(catalogEl);
   const elementsEl = Array.from(
     catalogEl.querySelectorAll(`[${atributeName}]`)
   );

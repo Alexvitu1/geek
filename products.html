@@ -7,10 +7,9 @@
     <title>My Diploma - Products page</title>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/products.css">
-    <!-- <script src="scripts/slider.js" defer></script> -->
-    <!-- <script src="scripts/tabs.js" defer></script> -->
     <script src="scripts/basketCounterProducts.js" defer></script>
     <script src="scripts/products.js" defer></script>
+    <script src="scripts/burger.js" defer></script>
 </head>
 
 <body>
@@ -41,24 +40,25 @@
                 </svg>
             </div>
             <div class="header__basket-box">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <g clip-path="url(#clip0_9102_102)">
-                        <path
-                            d="M8.25001 20.1667C8.75627 20.1667 9.16668 19.7563 9.16668 19.25C9.16668 18.7438 8.75627 18.3334 8.25001 18.3334C7.74375 18.3334 7.33334 18.7438 7.33334 19.25C7.33334 19.7563 7.74375 20.1667 8.25001 20.1667Z"
-                            stroke="#2C2D35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        <path
-                            d="M18.3333 20.1667C18.8396 20.1667 19.25 19.7563 19.25 19.25C19.25 18.7438 18.8396 18.3334 18.3333 18.3334C17.8271 18.3334 17.4167 18.7438 17.4167 19.25C17.4167 19.7563 17.8271 20.1667 18.3333 20.1667Z"
-                            stroke="#2C2D35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        <path
-                            d="M0.916656 0.916626H4.58332L7.03999 13.1908C7.12381 13.6128 7.35341 13.9919 7.68857 14.2617C8.02374 14.5315 8.44313 14.6749 8.87332 14.6666H17.7833C18.2135 14.6749 18.6329 14.5315 18.9681 14.2617C19.3032 13.9919 19.5328 13.6128 19.6167 13.1908L21.0833 5.49996H5.49999"
-                            stroke="#2C2D35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_9102_102">
-                            <rect width="22" height="22" fill="white" />
-                        </clipPath>
-                    </defs>
-                </svg>
+                <a href="basket.html" class="header__link"> <svg xmlns="http://www.w3.org/2000/svg" width="22"
+                        height="22" viewBox="0 0 22 22" fill="none">
+                        <g clip-path="url(#clip0_9102_102)">
+                            <path
+                                d="M8.25001 20.1667C8.75627 20.1667 9.16668 19.7563 9.16668 19.25C9.16668 18.7438 8.75627 18.3334 8.25001 18.3334C7.74375 18.3334 7.33334 18.7438 7.33334 19.25C7.33334 19.7563 7.74375 20.1667 8.25001 20.1667Z"
+                                stroke="#2C2D35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M18.3333 20.1667C18.8396 20.1667 19.25 19.7563 19.25 19.25C19.25 18.7438 18.8396 18.3334 18.3333 18.3334C17.8271 18.3334 17.4167 18.7438 17.4167 19.25C17.4167 19.7563 17.8271 20.1667 18.3333 20.1667Z"
+                                stroke="#2C2D35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M0.916656 0.916626H4.58332L7.03999 13.1908C7.12381 13.6128 7.35341 13.9919 7.68857 14.2617C8.02374 14.5315 8.44313 14.6749 8.87332 14.6666H17.7833C18.2135 14.6749 18.6329 14.5315 18.9681 14.2617C19.3032 13.9919 19.5328 13.6128 19.6167 13.1908L21.0833 5.49996H5.49999"
+                                stroke="#2C2D35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_9102_102">
+                                <rect width="22" height="22" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg></a>
                 <div class="header__basket">
                     <p class="basket-counter"></p>
                 </div>
@@ -155,7 +155,7 @@
                 <option value="decsending" class="catalog__option">По убыванию цены</option>
             </select>
             <div class="catalog__box">
-                <div class="card" data-price="14500" data-country="france">
+                <div class="card" data-price="14500" data-country="france" data-number="1">
                     <div class="card__img-box">
                         <img src="images/card_France_1.jpg" alt="Picture France" class="card__img">
                     </div>
@@ -165,7 +165,7 @@
                     <p class="card__price">14&nbsp;500 руб</p>
                     <button class="card__button">В корзину</button>
                 </div>
-                <div class="card" data-price="16500" data-country="france">
+                <div class="card" data-price="16500" data-country="france" data-number="2">
                     <div class="card__img-box">
                         <img src="images/card_France_2.jpg" alt="Picture France" class="card__img">
                     </div>
@@ -175,7 +175,7 @@
                     <p class="card__price">16&nbsp;500 руб</p>
                     <button class="card__button">В корзину</button>
                 </div>
-                <div class="card" data-price="20000" data-country="france">
+                <div class="card" data-price="20000" data-country="france" data-number="3">
                     <div class="card__img-box">
                         <img src="images/card_France_3.jpg" alt="Picture France" class="card__img">
                     </div>
@@ -185,7 +185,7 @@
                     <p class="card__price">20&nbsp;000 руб</p>
                     <button class="card__button">В корзину</button>
                 </div>
-                <div class="card" data-price="12000" data-country="france">
+                <div class="card" data-price="12000" data-country="france" data-number="4">
                     <div class="card__img-box">
                         <img src="images/card_France_4.jpg" alt="Picture France" class="card__img">
                     </div>
@@ -195,7 +195,7 @@
                     <p class="card__price">12&nbsp;000 руб</p>
                     <button class="card__button"> В корзину</button>
                 </div>
-                <div class="card" data-price="22500" data-country="france">
+                <div class="card" data-price="22500" data-country="france" data-number="5">
                     <div class="card__img-box">
                         <img src="images/card_France_5.jpg" alt="Picture France" class="card__img">
                     </div>
@@ -205,7 +205,7 @@
                     <p class="card__price">22&nbsp;500 руб</p>
                     <button class="card__button"> В корзину</button>
                 </div>
-                <div class="card" data-price="20000" data-country="france">
+                <div class="card" data-price="20000" data-country="france" data-number="6">
                     <div class="card__img-box">
                         <img src="images/card_France_6.jpg" alt="Picture France" class="card__img">
                     </div>
@@ -216,7 +216,7 @@
                     <button class="card__button"> В корзину</button>
                     <!-- </div> -->
                 </div>
-                <div class="card" data-price="16000" data-country="germany">
+                <div class="card" data-price="16000" data-country="germany" data-number="7">
                     <div class="card__img-box">
                         <img src="images/card_Germany_1.jpg" alt="Picture Germany" class="card__img">
                     </div>
@@ -226,7 +226,7 @@
                     <p class="card__price">16&nbsp;000 руб</p>
                     <button class="card__button"> В корзину</button>
                 </div>
-                <div class="card" data-price="14500" data-country="germany">
+                <div class="card" data-price="14500" data-country="germany" data-number="8">
                     <div class="card__img-box">
                         <img src="images/card_Germany_2.jpg" alt="Picture Germany" class="card__img">
                     </div>
@@ -236,7 +236,7 @@
                     <p class="card__price">14&nbsp;500 руб</p>
                     <button class="card__button"> В корзину</button>
                 </div>
-                <div class="card" data-price="20000" data-country="germany">
+                <div class="card" data-price="20000" data-country="germany" data-number="9">
                     <div class="card__img-box">
                         <img src="images/card_Germany_3.jpg" alt="Picture Germany" class="card__img">
                     </div>
@@ -246,7 +246,7 @@
                     <p class="card__price">20&nbsp;000 руб</p>
                     <button class="card__button"> В корзину</button>
                 </div>
-                <div class="card" data-price="13000" data-country="germany">
+                <div class="card" data-price="13000" data-country="germany" data-number="10">
                     <div class="card__img-box">
                         <img src="images/card_Germany_4.jpg" alt="Picture Germany" class="card__img">
                     </div>
@@ -256,7 +256,7 @@
                     <p class="card__price">13&nbsp;000 руб</p>
                     <button class="card__button"> В корзину</button>
                 </div>
-                <div class="card" data-price="20000" data-country="germany">
+                <div class="card" data-price="20000" data-country="germany" data-number="11">
                     <div class="card__img-box">
                         <img src="images/card_Germany_5.jpg" alt="Picture Germany" class="card__img">
                     </div>
@@ -266,7 +266,7 @@
                     <p class="card__price">20&nbsp;000 руб</p>
                     <button class="card__button"> В корзину</button>
                 </div>
-                <div class="card" data-price="23000" data-country="germany">
+                <div class="card" data-price="23000" data-country="germany" data-number="12">
                     <div class="card__img-box">
                         <img src="images/card_Germany_6.jpg" alt="Picture Germany" class="card__img">
                     </div>
@@ -277,7 +277,7 @@
                     <button class="card__button"> В корзину</button>
                     <!-- </div> -->
                 </div>
-                <div class="card " data-price="19500" data-country="england">
+                <div class="card " data-price="19500" data-country="england" data-number="13">
                     <div class="card__img-box">
                         <img src="images/card_England_1.jpg" alt="Picture England" class="card__img">
                     </div>
@@ -287,7 +287,7 @@
                     <p class="card__price">19&nbsp;500 руб</p>
                     <button class="card__button"> В корзину</button>
                 </div>
-                <div class="card" data-price="17500" data-country="england">
+                <div class="card" data-price="17500" data-country="england" data-number="14">
                     <div class="card__img-box">
                         <img src="images/card_England_2.jpg" alt="Picture England" class="card__img">
                     </div>
@@ -297,7 +297,7 @@
                     <p class="card__price">17&nbsp;500 руб</p>
                     <button class="card__button"> В корзину</button>
                 </div>
-                <div class="card" data-price="20500" data-country="england">
+                <div class="card" data-price="20500" data-country="england" data-number="15">
                     <div class="card__img-box">
                         <img src="images/card_England_3.jpg" alt="Picture England" class="card__img">
                     </div>
@@ -307,7 +307,7 @@
                     <p class="card__price">20&nbsp;500 руб</p>
                     <button class="card__button"> В корзину</button>
                 </div>
-                <div class="card" data-price="15500" data-country="england">
+                <div class="card" data-price="15500" data-country="england" data-number="16">
                     <div class="card__img-box">
                         <img src="images/card_England_4.jpg" alt="Picture England" class="card__img">
                     </div>
@@ -317,7 +317,7 @@
                     <p class="card__price">15&nbsp;500 руб</p>
                     <button class="card__button"> В корзину</button>
                 </div>
-                <div class="card" data-price="12500" data-country="england">
+                <div class="card" data-price="12500" data-country="england" data-number="17">
                     <div class="card__img-box">
                         <img src="images/card_England_5.jpg" alt="Picture England" class="card__img">
                     </div>
@@ -327,7 +327,7 @@
                     <p class="card__price">12&nbsp;500 руб</p>
                     <button class="card__button"> В корзину</button>
                 </div>
-                <div class="card" data-price="21000" data-country="england">
+                <div class="card" data-price="21000" data-country="england" data-number="18">
                     <div class="card__img-box">
                         <img src="images/card_England_6.jpg" alt="Picture England" class="card__img">
                     </div>
@@ -345,8 +345,9 @@
     <footer class="footer center">
         <div class="footer__contacts">
             <div class="logo footer__logo">
-                <img src="images/logo.svg" alt="Logo icon" class="logo__image">
-                <p class="logo__text">Ink. House</p>
+                <a href="index.html" class="header__link"><img src="images/logo.svg" alt="Logo icon"
+                        class="logo__image"></a>
+                <a href="index.html" class="logo__text">Ink. House</a>
             </div>
             <div class="footer__phone">
                 <a href="tel:+79995435454" class="footer__phone-link">+7 (999) 543-54-54</a>
