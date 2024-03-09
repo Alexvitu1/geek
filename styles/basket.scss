@@ -3,6 +3,13 @@
 @import 'header';
 @import 'footer';
 
+.fade-in {
+	-webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -30,14 +37,323 @@ html, body {
 }
 
 .basket {
+    margin-bottom: 100px;
 
-    &__message {
+    &__title {
+        padding-left: 30px;
+    }
+
+    &__catalog {
+        width: 70%;
+    }
+
+    &__order-cover {
+        width: 40%;
+    }
+
+    &__button-clean {
+        display: flex;
+        justify-content: right;
+        gap: 10px;
+        margin-bottom: 6px;
+        border-color: transparent;
+        background-color: transparent;
+
+    }
+
+    &__trash-icon {
+        cursor: pointer;
+
+        &:hover path {
+            fill: $button_color_1;
+        }
+    }
+
+    &__button-text {
+        @include font_styles;
+        color: $text_color_2;
+        font-size: 16px;
+        cursor: auto;
+    }
+
+
+    &__order {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // width: 40%;
+        // background-color: #f5f7fa;
+        background-color: #f6faf7;
+        border-radius: 12px;
+        padding: 12px 18px;      
+    }
+
+    &__order-li {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__order-text {
+        margin-bottom: 8px;
+        @include font_styles;
+        color: $text_color_1;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    &__order-items {
+        @include font_styles;
+        font-size: 14px;
+        margin-bottom: 3px;
+    }
+
+    &__order-total, &__order-total-text {
+        @include font_styles;
+        font-size: 18px;
+        margin-top: 10px;
+        font-weight: 600;
+    }
+
+    &__empty {
         font-size: 70;
         font-weight: 900;
         text-align: center;
     }
+
+    &__full {
+        display: flex;
+        padding: 0 20px;
+        gap: 40px;
+    }
+
+    &__order-button {
+        @include button;
+        padding: 10px 20px;
+        border: 1px solid transparent;
+        border-radius: 12px;
+        background-color: $button_color_1;
+        color: $text_color_3;
+        cursor: pointer;
+        margin-bottom: 20px;
+     
+            &:hover {
+
+                border: solid 1px transparent;
+                filter: brightness(1.15);
+            }
+    }
+
 }
 
+.card {
+
+    &__cover {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__wrap {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__img-box {
+        width: 100px;
+        height: 150px;
+        overflow: hidden;
+    }
+
+    &__img {
+        width: 100%;
+        object-fit: fill;
+    }
+
+    &__count {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        align-items: center;
+        // border: 2px solid grey;
+        padding: 2px;
+    }
+
+    &__unit-qty {
+        border: 1px solid $button_color_1;
+        padding: 3px 5px;
+        color: $button_color_1;
+        border-radius: 4px;
+        width: 50px;
+        text-align: center;
+    }
+
+    &__button-qty {
+        padding: 3px 5px;
+    }
+
+    &__line {
+        width: 100%;
+        border: 1px solid $button_color_1;
+        margin-bottom: 20px;
+    }
+
+    &__author {
+        // margin-bottom: 5px;
+        @include font_styles;
+        color: $text_color_2;
+        font-size: 16px;
+     }
+
+    &__name {
+        margin-bottom: 8px;
+        @include font_styles;
+        color: $text_color_1;
+        font-size: 25px;
+    }
+
+    &__desc {
+        margin-bottom: 20px;
+        @include font_styles;
+        font-size: 18px;
+        width: 200px;
+    }
+
+    &__price {
+        margin-bottom: 20px;
+        @include font_styles;
+        color: $button_color_1;        
+        font-size: 20px;
+    }
+
+    &__price-subtotal {
+        margin-bottom: 10px;
+        @include font_styles;
+        color: $button_color_1;        
+        font-size: 22px;
+    }
+
+    &__price-subtotal::after {
+        content: " \20BD";
+    }
+
+    &__button, &__button-qty {
+        @include button;
+        padding: 4px 8px;
+        background-color: $card_bgc;
+        color: $button_color_1;
+        border: solid 1px $button_color_1;
+        border: solid 1px transparent;
+        border-radius: 4px;
+        cursor: pointer;
+        
+        &:hover {
+            background-color: $button_color_1;
+            color: $text_color_3;
+            border: solid 1px transparent;
+        }
+        &:focus {
+            background-color: $button_bgc_focus;
+            color: $button_color_1;
+            border: solid 1px $button_color_1;
+        }
+        &:active {
+            background-color: $button_bgc_nav_active;
+            color: $text_color_3;
+            border: solid 1px transparent;
+        }
+    }
+
+    &__button {
+        font-size: 14px;
+        padding: 2px 4px;
+    }
+
+    &__button-qty {
+        width: 30px;
+        height: 30px;
+        padding: 0;
+    }
+
+    &__button-qty-left {
+        @include button;
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        background-color: $card_bgc;        
+        border: solid 1px transparent;
+        border-radius: 4px;
+    }
+
+}
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.75);
+    z-index: 1;
+    overflow-y: auto;
+
+    &__window {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+        // width: 52%;
+        // height: 65%;
+        max-width: 900px;
+        background-color: #F4F6F5;
+        transition: 1s;         
+    }
+
+    &__img-box {
+      width: 250px;
+      height: 320px;
+      overflow: hidden;
+      margin-bottom: 25px;
+    }
+
+    &__close {
+        position: absolute;
+        z-index: 1;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+
+    &__employee {
+      display: flex;
+      gap: 50px;
+    }
+
+    &__bio {
+      font-size: 20px;
+      padding-right: 30px;
+    }
+
+    &__text {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    &__text {
+text-align: center;
+    }
+}
+
+
+.ruble-sign::after {
+    content: " \20BD";
+}
 
 .hidden {
     display: none;
@@ -47,18 +363,60 @@ html, body {
     display: block;
 }
 
+.visible_flex {
+    display: flex;
+}
 
 @media (max-width:768px) {
 
+
+
+
+    .basket {
+        &__full {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        &__catalog {
+            width: 100%;
+        }
+
+        &__order-cover {
+            width: auto;
+        }
+
+    }
+
 }
 
-@media (max-width:700px) {
+@media (max-width:600px) {
 
-
-
+    .card {
+    
+        &__wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
 }
+
 
 @media (max-width: 460px) {
 
+    .card {
+    
+        &__cover {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &__desc {
+            width: auto;
+        }
+    }
 
 }

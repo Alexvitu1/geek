@@ -25,10 +25,10 @@ catalogBoxEl.addEventListener("click", (e) => {
     cartArray.push();
     const card = e.target.closest(".card");
     const number = card.getAttribute("data-number");
-    console.log(number);
+    // console.log(number);
     cartArray.push(number);
-    console.log(cartArray);
+    // console.log(cartArray);
     localStorage.setItem("selectedProducts", cartArray);
-    console.log(localStorage.getItem("selectedProducts"));
+    localStorage.setItem("addedProductsQuantity", counter);
   }
 });
