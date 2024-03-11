@@ -559,6 +559,9 @@ body {
   right: 10px;
   cursor: pointer;
 }
+.modal__close:hover {
+  fill: darkgrey;
+}
 .modal__employee {
   display: flex;
   gap: 50px;

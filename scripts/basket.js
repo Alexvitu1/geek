@@ -8,6 +8,8 @@ if (localStorage.length === 0) {
 
   const basketFullEl = document.querySelector(".basket__full");
   basketFullEl.classList.add("visible_flex");
+  const basketCounterEl = document.querySelector(".basket-counter");
+  // const headerBasketEl = document.querySelector(".header__basket");
   let productQty = localStorage.getItem("addedProductsQuantity");
   const productAttrs = localStorage.getItem("selectedProducts");
   const productsAttribArrEls = productAttrs.split(",");
@@ -51,9 +53,12 @@ if (localStorage.length === 0) {
       cardToDelete.classList.add("hidden");
       cardToDelete.classList.remove("active-card");
       productQty = productQty - 1;
-
+      localStorage.setItem("addedProductsQuantity", productQty);
       // Подсчет и вывод количества продуктов в форме заказа
       basketOrderItemsEl.innerText = `${productQty}`;
+
+      // Вывод обновленного количества товаров в корзине над значком корзины
+      basketCounterEl.innerText = productQty;
 
       // Подсчет общей стоимости
       const basketOrderTotalEl = document.querySelector(".ruble-sign");
@@ -159,6 +164,13 @@ basketFullEl.addEventListener("click", (e) => {
 const basketCleanEl = document.querySelector(".basket__trash-icon");
 basketCleanEl.addEventListener("click", (e) => {
   basketFullEl.classList.remove("visible_flex");
+
+  // Удаление количества товаров над значком корзины и обнуление счетчика количества товаров в LS
+  basketCounterEl.innerText = 0;
+  headerBasketEl.style.visibility = "hidden";
+  // localStorage.setItem("addedProductsQuantity", 0);
+  localStorage.removeItem("addedProductsQuantity");
+  localStorage.removeItem("selectedProducts");
 });
 
 // Модальное окно
@@ -166,7 +178,7 @@ basketCleanEl.addEventListener("click", (e) => {
 // const teamEl = document.querySelector(".team");
 const basketOrderButtonEl = document.querySelector(".basket__order-button");
 const modalEl = document.querySelector(".modal");
-// const modalWindowEl = document.querySelector(".modal__window");
+const modalWindowEl = document.querySelector(".modal__window");
 // const modalWindowAllEl = document.querySelectorAll(".modal__window");
 // const modalWindowArrayEl = document.querySelectorAll(`[data-modal]`);
 const modalWindowCloseEl = document.querySelector(".modal__close");
@@ -176,7 +188,8 @@ basketOrderButtonEl.addEventListener("click", (e) => {
 
   document.addEventListener("mousedown", function (event) {
     if (
-      (!modalEl.contains(event.target) && event.target !== modalEl) ||
+      (!modalWindowEl.contains(event.target) &&
+        event.target !== modalWindowEl) ||
       event.target === modalWindowCloseEl
     ) {
       modalEl.style.display = "none";

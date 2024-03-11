@@ -310,17 +310,12 @@ html, body {
         padding: 40px;
         // width: 52%;
         // height: 65%;
-        max-width: 900px;
+        max-width: 450px;
         background-color: #F4F6F5;
-        transition: 1s;         
+        transition: 1s;
+        border-radius: 15px;         
     }
 
-    &__img-box {
-      width: 250px;
-      height: 320px;
-      overflow: hidden;
-      margin-bottom: 25px;
-    }
 
     &__close {
         position: absolute;
@@ -328,27 +323,56 @@ html, body {
         top: 10px;
         right: 10px;
         cursor: pointer;
+
+            &:hover {
+                fill: darkgrey;
+            }
     }
 
-    &__employee {
-      display: flex;
-      gap: 50px;
-    }
-
-    &__bio {
-      font-size: 20px;
-      padding-right: 30px;
-    }
 
     &__text {
-      font-size: 16px;
-      margin-bottom: 10px;
+        margin-bottom: 25px;
+        @include font_styles;
+        color: $text_color_1;
+        font-size: 25px;
+
     }
 
-    &__text {
-text-align: center;
+    &__input {
+        margin-bottom: 20px;
+        width: 200px;
+        height: 40px;
+        border: 1px solid #bdbdbd;
+        border-radius: 5px;
+        padding: 22px 10px;
+
+
+
+        &:focus {
+            color: #212529;
+            background-color: #fff;
+            border-color: #bdbdbd;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+        }
     }
+
+    &__button {
+        width: 200px;
+        height: 40px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+    }
+
+    &__remark {
+        @include font_styles;
+        font-size: 14px;
+        margin-bottom: 3px;
+        text-align: center;
+    }
+
 }
+
 
 
 .ruble-sign::after {
