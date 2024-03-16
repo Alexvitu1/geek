@@ -456,10 +456,18 @@ html, body {
 }
 
 .basket {
-  margin-bottom: 100px;
+  margin-bottom: 130px;
 }
 .basket__title {
+  margin-top: 45px;
+  margin-bottom: 45px;
   padding-left: 30px;
+  color: #2C2D35;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-size: 50px;
+  line-height: 110%; /* 66px */
 }
 .basket__catalog {
   width: 70%;
@@ -531,9 +539,33 @@ html, body {
   font-weight: 600;
 }
 .basket__empty {
+  flex-direction: column;
+  align-items: center;
   font-size: 70;
   font-weight: 900;
   text-align: center;
+}
+.basket__img-box {
+  width: 300px;
+  overflow: hidden;
+  margin-bottom: 45px;
+}
+.basket__img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.basket__message, .basket__message-main {
+  color: #2C2D35;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-size: 24px;
+  line-height: 150%; /* 27px */
+}
+.basket__message-main {
+  font-size: 36px;
+  margin-bottom: 20px;
 }
 .basket__full {
   display: flex;
@@ -744,6 +776,10 @@ html, body {
   color: #2C2D35;
   font-size: 25px;
 }
+.modal__form {
+  display: flex;
+  flex-direction: column;
+}
 .modal__input {
   margin-bottom: 20px;
   width: 200px;
@@ -792,8 +828,7 @@ html, body {
 }
 
 @media (max-width: 768px) {
-  .basket__full {
-    display: flex;
+  .visible_flex {
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
@@ -819,5 +854,88 @@ html, body {
   }
   .card__desc {
     width: auto;
+  }
+  .card__delete {
+    display: flex;
+    gap: 15px;
+  }
+  .card__price-subtotal {
+    vertical-align: middle;
+    margin-bottom: 0;
+  }
+  .card__count {
+    margin-bottom: 30px;
+  }
+  .modal__button {
+    width: 150px;
+  }
+  .modal__input {
+    width: 150px;
+  }
+  .basket__img-box {
+    width: 180px;
+    margin-bottom: 20px;
+  }
+  .basket__title {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding-left: 30px;
+    color: #2C2D35;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 40px;
+    line-height: 110%; /* 66px */
+  }
+  .basket__message, .basket__message-main {
+    color: #2C2D35;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 18px;
+    line-height: 150%; /* 27px */
+  }
+  .basket__message-main {
+    font-size: 28px;
+    margin-bottom: 5px;
+  }
+}
+@media (max-height: 450px) {
+  .basket__message-box {
+    display: flex;
+    flex-direction: column;
+  }
+  .basket__img-box {
+    padding-left: 30px;
+    width: 150px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+  }
+  .basket__empty {
+    flex-direction: row;
+    gap: 0;
+  }
+  .basket__title {
+    margin-top: 35px;
+    margin-bottom: 30px;
+    padding-left: 30px;
+    color: #2C2D35;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 35px;
+    line-height: 110%; /* 66px */
+  }
+  .basket__message, .basket__message-main {
+    color: #2C2D35;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 18px;
+    line-height: 150%; /* 27px */
+  }
+  .basket__message-main {
+    font-size: 28px;
+    margin-bottom: 5px;
   }
 }/*# sourceMappingURL=basket.css.map */

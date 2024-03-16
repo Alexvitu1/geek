@@ -1,24 +1,5 @@
 "use strict";
 
-// Отправка формы запроса
-
-// const writeButtonsEl = document.querySelectorAll(".employee__button-write");
-
-// writeButtonsEl.forEach((button) => {
-//   button.addEventListener("click", () => {
-//     const employeeEl = button.closest(".employee");
-//     const employeeFormEl = employeeEl.querySelector(".employee__form");
-//     const allEmployeeFormEl = document.querySelectorAll(".employee__form");
-
-//     allEmployeeFormEl.forEach((form) => {
-//       if (form !== employeeFormEl) {
-//         form.style.display = "none";
-//       }
-//       employeeFormEl.style.display = "block";
-//     });
-//   });
-// });
-
 // Модальное окно
 
 const teamEl = document.querySelector(".team");
@@ -42,16 +23,18 @@ teamEl.addEventListener("click", (e) => {
   }
 
   document.addEventListener("mousedown", function (event) {
+    const modalElCurrent = document.querySelector(".visible");
+    // const modalWindowCloseElCurrent =
+    //   modalElCurrent.querySelector(".modal__close");
     if (
-      (!modalWindowEl.contains(event.target) &&
-        event.target !== modalWindowEl) ||
+      (!modalElCurrent.contains(event.target) &&
+        event.target !== modalElCurrent) ||
       event.target === modalWindowCloseEl
     ) {
       modalWindowAllEl.forEach((item) => {
         item.classList.remove("visible");
         item.classList.add("hidden");
       });
-
       modalEl.style.display = "none";
     }
   });

@@ -30,7 +30,8 @@ catalogBoxEl.addEventListener("click", (e) => {
     const card = e.target.closest(".card");
     const number = card.getAttribute("data-number");
     cartArray.push(number);
-    localStorage.setItem("selectedProducts", cartArray);
+    // localStorage.setItem("selectedProducts", cartArray);
+    localStorage.setItem("selectedProducts", JSON.stringify(cartArray));
     localStorage.setItem("addedProductsQuantity", counter);
     basketCounterEl.innerText = localStorage.getItem("addedProductsQuantity");
   }
