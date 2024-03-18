@@ -26,7 +26,7 @@ catalogBoxEl.addEventListener("click", (e) => {
     e.target.innerText = "Товар в корзине";
     e.target.classList.remove("card__button");
     e.target.classList.add("catalog__card__button_basket");
-    cartArray.push();
+    // cartArray.push();
     const card = e.target.closest(".card");
     const number = card.getAttribute("data-number");
     cartArray.push(number);
@@ -36,3 +36,5 @@ catalogBoxEl.addEventListener("click", (e) => {
     basketCounterEl.innerText = localStorage.getItem("addedProductsQuantity");
   }
 });
+
+const productCounter = () => {};

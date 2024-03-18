@@ -22,7 +22,7 @@ if (!localStorage.getItem("addedProductsQuantity")) {
   );
   basketOrderItemsEl.innerText = `${productQty}`;
 
-  extendCardHeight(basketFullEl);
+  // extendCardHeight(basketFullEl);
 
   productsAttribArrEls.forEach((item) => {
     cardsEls.forEach((element) => {
@@ -63,7 +63,7 @@ if (!localStorage.getItem("addedProductsQuantity")) {
       if (productQty === 0) {
         basketFullEl.classList.remove("visible_flex");
         const basketEl = document.querySelector(".basket");
-        basketEl.style.height = "55vh";
+        // basketEl.style.height = "55vh";
 
         // Удаление количества товаров над значком корзины и обнуление счетчика количества товаров в LS
         hideProductQty();
@@ -187,12 +187,11 @@ function extendCardHeight(basketFullEl) {
   if (basketFullEl.clientHeight < document.documentElement.clientHeight) {
     basketFullEl.style.height = `${
       basketFullEl.clientHeight +
-      (document.documentElement.clientHeight -
-        basketFullEl.clientHeight -
-        104 -
-        176 -
-        150 -
-        125)
+      104 +
+      176 +
+      150 +
+      125 +
+      (document.documentElement.clientHeight - basketFullEl.clientHeight)
     }px`;
   }
 }
