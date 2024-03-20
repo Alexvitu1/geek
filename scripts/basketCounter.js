@@ -9,8 +9,10 @@ const cardButtonEl = document.querySelector(".card__button");
 
 let counter = 0;
 let cartArray = [];
+let productItemQtyArray = [];
+let productItemPriceArray = [];
 
-const productQty = localStorage.getItem("addedProductsQuantity");
+const productQty = localStorage.getItem("productQty");
 if (productQty > 0) {
   headerBasketEl.style.visibility = "visible";
   basketCounterEl.innerText = productQty;
@@ -26,15 +28,23 @@ catalogBoxEl.addEventListener("click", (e) => {
     e.target.innerText = "Товар в корзине";
     e.target.classList.remove("card__button");
     e.target.classList.add("catalog__card__button_basket");
-    // cartArray.push();
     const card = e.target.closest(".card");
     const number = card.getAttribute("data-number");
     cartArray.push(number);
-    // localStorage.setItem("selectedProducts", cartArray);
+    productItemQtyArray.push(1);
+    productItemPriceArray.push(card.getAttribute("data-price"));
     localStorage.setItem("selectedProducts", JSON.stringify(cartArray));
-    localStorage.setItem("addedProductsQuantity", counter);
-    basketCounterEl.innerText = localStorage.getItem("addedProductsQuantity");
+    localStorage.setItem("productQty", counter);
+    localStorage.setItem(
+      "productItemQtyArray",
+      JSON.stringify(productItemQtyArray)
+    );
+    localStorage.setItem(
+      "productItemPriceArray",
+      JSON.stringify(productItemPriceArray)
+    );
+    basketCounterEl.innerText = localStorage.getItem("productQty");
   }
 });
 
-const productCounter = () => {};
+// const productCounter = () => {};

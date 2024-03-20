@@ -19,25 +19,6 @@ teamEl.addEventListener("click", (e) => {
     changeElement(number, `data-modal`, modalWindowArrayEl);
   }
 
-  // document.addEventListener("mousedown", function (event) {
-  //   const modalElCurrent = document.querySelector(".visible");
-  //   console.log(modalElCurrent);
-  //   // const modalWindowCloseElCurrent =
-  //   //   modalElCurrent.querySelector(".modal__close");
-  //   const modalWindowCloseEl = document.querySelector(".modal__close");
-  //   if (
-  //     !modalElCurrent.contains(event.target) ||
-  //     event.target === modalWindowCloseEl
-  //   ) {
-  //     modalWindowAllEl.forEach((item) => {
-  //       item.classList.remove("visible");
-  //       item.classList.add("hidden");
-  //       console.log("!!!");
-  //     });
-  //     modalEl.style.display = "none";
-  //   }
-  // });
-
   document.addEventListener("mousedown", function (event) {
     const modalElCurrent = document.getElementById("ID");
     console.log(`modalElCurrent = ${modalElCurrent}`);
