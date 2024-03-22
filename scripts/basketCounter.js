@@ -46,5 +46,3 @@ catalogBoxEl.addEventListener("click", (e) => {
     basketCounterEl.innerText = localStorage.getItem("productQty");
   }
 });
-
-// const productCounter = () => {};

@@ -38,6 +38,7 @@ teamEl.addEventListener("click", (e) => {
   });
 });
 
+// Functions
 function changeElement(number, elementAtrribute, elementArray) {
   elementArray.forEach((item) => {
     if (parseInt(item.getAttribute(elementAtrribute)) === number) {

@@ -1,4 +1,5 @@
 "use strict";
+
 const sortSelectEl = document.querySelector("#sort-select");
 sortSelectEl.onchange = function () {
   const selectedOption = sortSelectEl.value;
@@ -9,38 +10,6 @@ sortSelectEl.onchange = function () {
   } else {
     location.reload();
   }
-};
-const sortElementsByAscPrice = (atributeName) => {
-  const catalogEl = document.querySelector(".catalog__box");
-  // console.log(catalogEl);
-  const elementsEl = Array.from(
-    catalogEl.querySelectorAll(`[${atributeName}]`)
-  );
-  elementsEl.sort((a, b) => {
-    const priceA = parseFloat(a.getAttribute(atributeName));
-    const priceB = parseFloat(b.getAttribute(atributeName));
-    return priceA - priceB;
-  });
-
-  elementsEl.forEach((element) => {
-    catalogEl.appendChild(element);
-  });
-};
-const sortElementsByDescPrice = (atributeName) => {
-  const catalogEl = document.querySelector(".catalog__box");
-  // console.log(catalogEl);
-  const elementsEl = Array.from(
-    catalogEl.querySelectorAll(`[${atributeName}]`)
-  );
-  elementsEl.sort((a, b) => {
-    const priceA = parseFloat(a.getAttribute(atributeName));
-    const priceB = parseFloat(b.getAttribute(atributeName));
-    return priceB - priceA;
-  });
-
-  elementsEl.forEach((element) => {
-    catalogEl.appendChild(element);
-  });
 };
 
 const checkboxEl = document.querySelector(".checkbox-box");
@@ -54,6 +23,7 @@ checkboxEl.addEventListener("change", (e) => {
       counter++;
     }
   });
+
   checkboxEls.forEach((item) => {
     let inputIdCountry = e.target.id;
     switch (inputIdCountry) {
@@ -92,6 +62,39 @@ checkboxEl.addEventListener("change", (e) => {
 });
 
 // Functions
+
+const sortElementsByAscPrice = (atributeName) => {
+  const catalogEl = document.querySelector(".catalog__box");
+  const elementsEl = Array.from(
+    catalogEl.querySelectorAll(`[${atributeName}]`)
+  );
+  elementsEl.sort((a, b) => {
+    const priceA = parseFloat(a.getAttribute(atributeName));
+    const priceB = parseFloat(b.getAttribute(atributeName));
+    return priceA - priceB;
+  });
+
+  elementsEl.forEach((element) => {
+    catalogEl.appendChild(element);
+  });
+};
+
+const sortElementsByDescPrice = (atributeName) => {
+  const catalogEl = document.querySelector(".catalog__box");
+  const elementsEl = Array.from(
+    catalogEl.querySelectorAll(`[${atributeName}]`)
+  );
+  elementsEl.sort((a, b) => {
+    const priceA = parseFloat(a.getAttribute(atributeName));
+    const priceB = parseFloat(b.getAttribute(atributeName));
+    return priceB - priceA;
+  });
+
+  elementsEl.forEach((element) => {
+    catalogEl.appendChild(element);
+  });
+};
+
 const showElementsCountry = (atributeName, country) => {
   const catalogEl = document.querySelector(".catalog__box");
   const elementsEl = Array.from(

@@ -8,8 +8,6 @@
 	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
-
-
 * {
     margin: 0;
     padding: 0;
@@ -20,6 +18,17 @@
 html, body {
     font-family: 'Raleway', sans-serif;
             scroll-behavior: smooth;
+            height:100%
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 1 auto;
 }
 
 .logo {
@@ -37,7 +46,6 @@ html, body {
 }
 
 .basket {
-
     margin-bottom: 130px;
 
     &__title {
@@ -64,7 +72,6 @@ html, body {
         margin-bottom: 6px;
         border-color: transparent;
         background-color: transparent;
-
     }
 
     &__trash-icon {
@@ -82,13 +89,10 @@ html, body {
         cursor: auto;
     }
 
-
     &__order {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        // width: 40%;
-        // background-color: #f5f7fa;
         background-color: #f6faf7;
         border-radius: 12px;
         padding: 12px 18px;      
@@ -131,7 +135,6 @@ html, body {
 
     &__img-box {
         width: 300px;
-        // height: 150px;
         overflow: hidden;
         margin-bottom: 45px;
     }
@@ -169,16 +172,10 @@ html, body {
         margin-bottom: 20px;
      
             &:hover {
-
                 border: solid 1px transparent;
                 filter: brightness(1.15);
             }
     }
-
-    // &__height {
-    //     max-height: 70vh;
-    // }
-
 }
 
 .card {
@@ -210,7 +207,6 @@ html, body {
         gap: 10px;
         align-items: flex-start;
         align-items: center;
-        // border: 2px solid grey;
         padding: 2px;
     }
 
@@ -234,7 +230,6 @@ html, body {
     }
 
     &__author {
-        // margin-bottom: 5px;
         @include font_styles;
         color: $text_color_2;
         font-size: 16px;
@@ -321,7 +316,6 @@ html, body {
     }
 }
 
-
 .modal {
     position: fixed;
     top: 0;
@@ -342,14 +336,11 @@ html, body {
         flex-direction: column;
         align-items: center;
         padding: 40px;
-        // width: 52%;
-        // height: 65%;
         max-width: 450px;
         background-color: #F4F6F5;
         transition: 1s;
         border-radius: 15px;         
     }
-
 
     &__close {
         position: absolute;
@@ -369,7 +360,6 @@ html, body {
         @include font_styles;
         color: $text_color_1;
         font-size: 25px;
-
     }
 
     &__form {
@@ -410,8 +400,6 @@ html, body {
 
 }
 
-
-
 .ruble-sign::after {
     content: " \20BD";
 }
@@ -430,7 +418,6 @@ html, body {
 
 @media (max-width:768px) {
 
-
     .visible_flex {
         justify-content: center;
         flex-wrap: wrap;
@@ -438,7 +425,6 @@ html, body {
     }
 
     .basket {
-
         &__catalog {
             width: 100%;
         }
@@ -446,15 +432,12 @@ html, body {
         &__order-cover {
             width: auto;
         }
-
     }
-
 }
 
 @media (max-width:600px) {
 
-    .card {
-    
+    .card {    
         &__wrap {
             display: flex;
             flex-direction: column;
@@ -466,8 +449,7 @@ html, body {
 
 @media (max-width: 460px) {
 
-    .card {
-    
+    .card {    
         &__cover {
             flex-direction: column;
             gap: 20px;
@@ -493,41 +475,34 @@ html, body {
     }
 
     .modal {
-
         &__button {
             width: 150px;
         }
 
         &__input {
-            width: 150px;
-            
+            width: 150px;            
         }
     }
 
     .basket {
-    &__img-box {
-        width: 180px;
-        margin-bottom: 20px;
+        &__img-box {
+            width: 180px;
+            margin-bottom: 20px;
+            }
+
+        &__title {
+            margin-top: 40px;
+            margin-bottom: 30px;
+            font-size: 40px;
         }
 
-
-    &__title {
-        margin-top: 40px;
-        margin-bottom: 30px;
-        padding-left: 30px;
-        @include font_styles;
-        font-size: 40px;
-        line-height: 110%; /* 66px */
-    }
-    &__message, &__message-main {
-        @include font_styles;
-        font-size: 18px;
-        line-height: 150%; /* 27px */
+        &__message, &__message-main {
+            font-size: 18px;
         }
 
-    &__message-main {
-        font-size: 28px;
-        margin-bottom: 5px;
+        &__message-main {
+            font-size: 28px;
+            margin-bottom: 5px;
         }
     }
 }
@@ -555,15 +530,11 @@ html, body {
         &__title {
             margin-top: 35px;
             margin-bottom: 30px;
-            padding-left: 30px;
-            @include font_styles;
             font-size: 35px;
-            line-height: 110%; /* 66px */
         }
+        
         &__message, &__message-main {
-            @include font_styles;
             font-size: 18px;
-            line-height: 150%; /* 27px */
             }
     
         &__message-main {

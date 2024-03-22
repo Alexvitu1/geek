@@ -29,7 +29,7 @@
     }
   }
 
-  .center {
+.center {
     padding-left: calc(50% - 550px);
     padding-right: calc(50% - 550px);
 }
@@ -135,7 +135,6 @@
         visibility: hidden;
         padding: 17px 0 0 15px;
     }
-
  
     &__burger-nav-animation {
         left: 0px;
@@ -148,7 +147,6 @@
     &__burger-nav-animation-exit {
         -webkit-animation: scale-out-hor-left 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
         animation: scale-out-hor-left 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-
     }
 
     /* Styles for burger menu on JS  - end*/
@@ -170,7 +168,6 @@
     &__link, &__burger-link {
         text-decoration: none;
         @include font_styles;
-        
         font-size: 20px;
         
             &:hover {
@@ -187,7 +184,6 @@
     }
 
     &__basket-box {
-
         position: relative;
 
         &:hover svg path {
@@ -229,8 +225,6 @@
         align-items: center;
         gap: 60px;
     }
-
-
 }
 
 .logo__text {
@@ -252,7 +246,6 @@
     }
 
     .header {
-
         &__link, &__burger-link {
             font-size: 18px;
         }
@@ -261,8 +254,7 @@
 
 @media (max-width:700px) {
 
-    .header {
-    
+    .header {    
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -279,8 +271,7 @@
         &__container {
             justify-content: space-between;
             width: 100%;
-            gap: 0;
-            
+            gap: 0;            
         }
     }
 }
@@ -312,5 +303,4 @@
             margin-right: 3%;            
         }
     }
-
 }

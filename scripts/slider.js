@@ -45,6 +45,8 @@ dotsEl.addEventListener("click", (e) => {
   }
 });
 
+// Functions
+
 function changeDot(number) {
   const currentDot = dotsEl.querySelector(".color");
   currentDot.classList.remove("color");

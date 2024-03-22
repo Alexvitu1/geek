@@ -16,11 +16,6 @@ body {
             scroll-behavior: smooth;
 }
 
-// .center {
-//     padding-left: calc(50% - 550px);
-//     padding-right: calc(50% - 550px);
-// }
-
 .center-wide {
     padding-left: calc(50% - 720px);
     padding-right: calc(50% - 720px);
@@ -129,6 +124,7 @@ body {
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
     }
+    
     &__card__button_basket {
         @include button;
         width: 100%;
@@ -179,13 +175,13 @@ body {
         width: 100%;
     }
 
-        &__author {
+    &__author {
         margin-top: 20px;
         margin-bottom: 10px;
         @include font_styles;
         color: $text_color_2;
         font-size: 18px;
-     }
+    }
 
     &__name {
         margin-bottom: 8px;
@@ -215,7 +211,6 @@ body {
         color: $button_color_1;
         border: solid 1px $button_color_1;
         
-
         &:hover {
             background-color: $button_color_1;
             color: $text_color_3;
@@ -231,10 +226,7 @@ body {
             color: $text_color_3;
             border: solid 1px transparent;
         }
-    }
-
-
-    
+    }   
 }
 
 .content--active {
@@ -244,7 +236,6 @@ body {
 }
 
 .new-collection {
-
     background-image: url(../images/new-collection_background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -306,7 +297,6 @@ body {
             border: solid 1px transparent;
         }
     }
-
 }
 
 .team {
@@ -342,8 +332,7 @@ body {
         margin-top: 124px;
         cursor: pointer;
 
-
-            &:hover {
+        &:hover {
                 color: $brand_nav-hr_color;
             }
 
@@ -354,7 +343,6 @@ body {
             &:active {
                 color: $button_bgc_nav_active;            
             }
-
     }
 
     &__text {
@@ -369,14 +357,12 @@ body {
         display: flex;
         gap: 30px;
     }
-
 }
 
 
 @media (max-width:768px) {
 
     .top {
-
         &__title, &_title-span  {
             font-size: 40px;
             line-height: 100%;
@@ -390,7 +376,6 @@ body {
         &__text {
             margin-bottom: 40px;
         }
-
     }
 
     .catalog {
@@ -403,11 +388,9 @@ body {
             grid-template-columns: repeat(2, 1fr);
             gap: 30px;
         }
-
     }
 
     .new-collection {
-
         background-image: url(../images/new-collection_background_tablet.jpg);
         
         &__icon {
@@ -462,7 +445,6 @@ body {
     }
 
     .catalog {
-
         &__heading {
             display: block;
         }
@@ -470,11 +452,9 @@ body {
         &__title {
             margin-bottom: 20px;
         }
-
     }
 
     .card {
-
         &__author {
             font-size: 16px;
         }
@@ -494,7 +474,6 @@ body {
         &__button {
             font-size: 18px;
         }
-
     }
 
     .new-collection {            
@@ -511,10 +490,9 @@ body {
             width: 50px;
             height: 50px;
         }
-            }
+    }
 
     .team {
-
         padding-top: 50px;
         padding-bottom: 50px;
 
@@ -566,7 +544,7 @@ body {
   
         &__content {
             margin-top: 0px;
-         }
+        }
 
         &__text {
             font-size: 14px;
@@ -575,7 +553,6 @@ body {
     }
 
     .catalog {
-
         &__title {
             font-size: 24px;
         }
@@ -583,8 +560,7 @@ body {
         &__items {
             grid-template-columns: 100%;
             gap: 30px;
-        }
-    
+        }   
     }
 
     .card {
@@ -600,8 +576,7 @@ body {
 
         &__name {
             margin-bottom: 10px;
-        }
-        
+        }        
     }
 
     .tab {
@@ -615,7 +590,6 @@ body {
     }
 
     .new-collection {
-
         background-image: url(../images/new-collection_background_mobile.jpg);
 
         &__title {
